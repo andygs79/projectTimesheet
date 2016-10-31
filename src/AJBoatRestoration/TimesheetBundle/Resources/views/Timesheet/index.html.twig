@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Timesheet</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+<p>Now: {{ now }}</p>
+<p>Week number: {{ week }}</p>
+<form method="GET" action="TimesheetSubmit.php">
+    <table>
+        <tr>
+            <td>Project</td>
+            <td>&nbsp;</td>
+            {% for day in days %}
+            <th>{{ day }}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <select name="{{ week }}_project">
+                    <option value="project">project</option>
+                    <option value="project">project</option>
+                    <option value="project">project</option>
+                    <option value="project">project</option>
+                </select>
+            </td>
+            <td>Start time: </td>
+            {% for day in days %}
+                <td><input type="text" name="{{ week }}_{{ day }}_startTime"/>&nbsp;</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>End time: </td>
+            {% for day in days %}
+                <td><input type="text" name="{{ week }}_{{ day }}_endTime" />&nbsp;</td>
+            {% endfor %}
+        </tr>
+    </table>
+    <input type="submit" value="Submit" name="row_{{ week }}_submit">
+    <input type="button" value="Add another row" name="row_{{ week }}_addRow">
+</form>
+</body>
+
