@@ -12,11 +12,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
-/**
- * Class TimesheetController
- * @package AJBoatRestoration\TimesheetBundle\Controller
- * @Route("/timesheet")
- */
 class TimesheetController extends Controller
 {
     private $now;
