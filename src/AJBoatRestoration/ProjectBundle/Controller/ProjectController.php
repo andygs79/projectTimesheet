@@ -12,6 +12,6 @@ class ProjectController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('ProjectBundle:Default:index.html.twig');
+        return $this->render('ProjectBundle:Project:index.html.twig');
     }
 }
