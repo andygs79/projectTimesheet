@@ -1,7 +1,7 @@
 project:
     resource: "@ProjectBundle/Controller/"
     type:     annotation
-    prefix:   /
+#    prefix:   /
 
 timesheet:
     resource: "@TimesheetBundle/Controller/"

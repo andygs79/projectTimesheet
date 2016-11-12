@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Class TimesheetController
  * @package AJBoatRestoration\TimesheetBundle\Controller
- * @Route("/")
+ * @Route("/timesheet")
  */
 class TimesheetController extends Controller
 {

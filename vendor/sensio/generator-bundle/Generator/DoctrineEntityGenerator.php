@@ -50,7 +50,7 @@ class DoctrineEntityGenerator extends Generator
      */
     public function generate(BundleInterface $bundle, $entity, $format, array $fields)
     {
-        // configure the bundle (needed if the bundle does not contain any Entity yet)
+        // configure the bundle (needed if the bundle does not contain any Entities yet)
         $config = $this->registry->getManager(null)->getConfiguration();
         $config->setEntityNamespaces(array_merge(
             array($bundle->getName() => $bundle->getNamespace().'\\Entity'),
@@ -96,12 +96,12 @@ class DoctrineEntityGenerator extends Generator
             $entityCode
         );
 
-        $this->filesystem->mkdir(dirname($entityPath));
-        file_put_contents($entityPath, $entityCode);
+        self::mkdir(dirname($entityPath));
+        self::dump($entityPath, $entityCode);
 
         if ($mappingPath) {
-            $this->filesystem->mkdir(dirname($mappingPath));
-            file_put_contents($mappingPath, $mappingCode);
+            self::mkdir(dirname($mappingPath));
+            self::dump($mappingPath, $mappingCode);
         }
 
         $path = $bundle->getPath().str_repeat('/..', substr_count(get_class($bundle), '\\'));
