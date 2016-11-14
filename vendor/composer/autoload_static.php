@@ -62,6 +62,10 @@ class ComposerStaticInit0f13e4a9e54450a82fd992c5327ea391
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
+        'A' => 
+        array (
+            'Ampisoft\\UserBundle\\' => 20,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -168,6 +172,10 @@ class ComposerStaticInit0f13e4a9e54450a82fd992c5327ea391
         'Doctrine\\Bundle\\DoctrineBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
+        ),
+        'Ampisoft\\UserBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ampisoft/user-bundle',
         ),
     );
 
